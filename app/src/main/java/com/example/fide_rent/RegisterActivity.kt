@@ -49,6 +49,9 @@ class RegisterActivity : AppCompatActivity() {
                 createNewAccount()
             }
         }
+        binding.txtRegisterBack.setOnClickListener {
+            goToLogin()
+        }
     }
 
     private fun createNewAccount(){
@@ -82,6 +85,11 @@ class RegisterActivity : AppCompatActivity() {
             val intent= Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun goToLogin(){
+        val intent= Intent(this, loginActivity::class.java)
+        startActivity(intent)
     }
 
     private fun validateFields():Boolean{

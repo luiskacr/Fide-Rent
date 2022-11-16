@@ -16,6 +16,7 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -63,6 +64,10 @@ class loginActivity : AppCompatActivity() {
         binding.btnGoogle.setOnClickListener {
             goSignInGoogle()
         }
+
+        binding.txtForgotPassword.setOnClickListener{
+            goForgot()
+        }
     }
 
     private fun doLogin(){
@@ -82,6 +87,11 @@ class loginActivity : AppCompatActivity() {
                 }
 
         }
+    }
+
+    private fun goForgot(){
+        val intent = Intent(this,ForgotPasswordActivity::class.java)
+        startActivity(intent)
     }
 
     /*
@@ -144,10 +154,18 @@ class loginActivity : AppCompatActivity() {
         val credential = GoogleAuthProvider.getCredential(account.idToken , null)
         auth.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful){
-                val intent : Intent = Intent(this , HomeActivity::class.java)
-                intent.putExtra("email" , account.email)
-                intent.putExtra("name" , account.displayName)
-                startActivity(intent)
+                val user = auth.currentUser
+                var userProfile: UserProfileChangeRequest = UserProfileChangeRequest.Builder().apply {
+                    displayName = (account.displayName)
+                }.build()
+
+                user?.updateProfile(userProfile)
+
+                goHome(user)
+//                val intent : Intent = Intent(this , HomeActivity::class.java)
+//                intent.putExtra("email" , account.email)
+//                intent.putExtra("name" , account.displayName)
+//                startActivity(intent)
             }else{
                 alerts.showBasicToast(it.exception.toString(),this)
             }
