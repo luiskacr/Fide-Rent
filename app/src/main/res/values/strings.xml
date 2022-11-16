@@ -1,3 +1,52 @@
 <resources>
-    <string name="app_name">fide-Rent</string>
+    <string name="app_name">Costa Rica Cars</string>
+
+    <!--Login Strings -->
+    <string name="login_user">Correo</string>
+    <string name="login_pass">Contraseña</string>
+    <string name="btn_login">Ingresar</string>
+    <string name="btn_create">Registrarse</string>
+    <string name="btn_google">Ingresa con Google</string>
+    <string name="error">Error</string>
+    <string name="accept">Aceptar</string>
+    <string name="error_empty_fields">Los Campos de Usuario o Contrasena no puede estar Vacios</string>
+    <string name="error_login">Se ha producido un error autentificando al Usuario</string>
+    <string name="error_bad_login">Usuario o Contrasena incorrecto</string>
+
+    <!--Register Strings -->
+    <string name="register_name">Nombre</string>
+    <string name="register_lastname">Apellido</string>
+    <string name="register_mail">Correo</string>
+    <string name="register_password">Contraseña</string>
+    <string name="register_confirm">Confirmar Contraseña</string>
+    <string name="btn_register">Registrarse</string>
+    <string name="error_register_empty">El campo  %1$s es obligatorio!</string>
+    <string name="error_register_password">Las contraseñas deben de coincidir</string>
+    <string name="error_register_password_lent">Las contraseñas debe de ser minimo de 6 caracteres</string>
+    <string name="error_register">Hubo un error al crear la cuenta</string>
+
+    <!--Home Menu -->
+    <string name="action_settings">Ajustes</string>
+    <string name="action_logout">Cerrar sesión</string>
+    <string name="logout_message">Sesión Cerrada</string>
+
+
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hola</string>
+
+
 </resources>
