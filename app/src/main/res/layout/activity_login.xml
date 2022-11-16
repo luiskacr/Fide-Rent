@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginActivity"
+    android:background="@drawable/bg_login"
+    >
+
+    <LinearLayout
+        android:layout_width="376dp"
+        android:layout_height="437dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_edit_text"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="8dp"
+            android:hint="@string/login_user"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/input_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_edit_text"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_pas"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:hint="@string/login_pass"
+            android:inputType="textPassword"
+            android:paddingLeft="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_green"
+                android:text="@string/btn_login"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/btn_register_view"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_green"
+                android:text="@string/btn_create"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_forgot_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textColor="@color/white"
+            android:gravity="end"
+            android:textSize="16dp"
+            android:layout_margin="8dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <View
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@+id/orTxt"
+                android:layout_margin="20dp"
+                />
+            <TextView
+                android:id="@+id/orTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="O"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                />
+            <View
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/orTxt"
+                android:layout_margin="20dp"
+                />
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btn_google"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/googleg_standard_color_18"
+            android:text="@string/btn_google"
+            android:textColor="@color/main_green"
+            android:gravity="center"
+            android:paddingEnd="40dp"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
