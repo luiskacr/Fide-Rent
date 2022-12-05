@@ -1,4 +1,4 @@
-package com.example.fide_rent.ui.home
+package com.example.fide_rent.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -14,5 +14,6 @@ class HomeViewModel : ViewModel() {
         value = user?.displayName.toString()
     }
     val text: LiveData<String> = _text
+
 
 }

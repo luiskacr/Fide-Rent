@@ -68,6 +68,7 @@ class loginActivity : AppCompatActivity() {
         binding.txtForgotPassword.setOnClickListener{
             goForgot()
         }
+
     }
 
     private fun doLogin(){

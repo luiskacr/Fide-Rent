@@ -5,10 +5,14 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
 
-
+    <!--Color Palette-->
     <color name="main_green">#20AD4D</color>
-    <color name="dark_green">#125931</color>
+    <color name="dark_green">#137F41</color>
+    <color name="green_1">#3AB54D</color>
+    <color name="green_2">#63BC60</color>
+    <color name="green_light">#9CD294</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="gray">#707070</color>
 </resources>

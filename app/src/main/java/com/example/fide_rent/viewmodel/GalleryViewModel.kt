@@ -1,4 +1,4 @@
-package com.example.fide_rent.ui.gallery
+package com.example.fide_rent.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
