@@ -1,11 +1,9 @@
 package com.example.fide_rent
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -18,7 +16,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fide_rent.customs.CustomAlerts
 import com.example.fide_rent.databinding.ActivityHomeBinding
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -29,7 +26,8 @@ class HomeActivity : AppCompatActivity() {
 
     private val user = Firebase.auth.currentUser
 
-    val alerts: CustomAlerts = CustomAlerts()
+    private val alerts: CustomAlerts = CustomAlerts()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,18 +48,23 @@ class HomeActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.maps, R.id.select_car
             ), drawerLayout
         )
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+
         setup()
     }
 
     private fun setup(){
         setNames()
+        binding.appBarHome.toolbar.title = getString(R.string.menu_tittle)
+        //Hide the Message button
+        binding.appBarHome.fab.hide()
+
     }
 
 
@@ -76,13 +79,12 @@ class HomeActivity : AppCompatActivity() {
         val headerView : View = navigationView.getHeaderView(0)
         val navUsername : TextView = headerView.findViewById(R.id.text_display_name)
         val navUserEmail : TextView = headerView.findViewById(R.id.text_display_mail)
-        val userImageView : ImageView = headerView.findViewById(R.id.imageView)
+        //val userImageView : ImageView = headerView.findViewById(R.id.imageView)
 
         navUsername.text = user?.displayName.toString()
         navUserEmail.text = user?.email.toString()
 
     }
-
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
@@ -99,6 +101,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -9,7 +9,14 @@
         android:id="@+id/nav_home"
         android:name="com.example.fide_rent.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_locationsFragment"
+            app:destination="@id/maps" />
+        <action
+            android:id="@+id/action_nav_home_to_select_car"
+            app:destination="@id/select_car" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,4 +29,36 @@
         android:name="com.example.fide_rent.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/maps"
+        android:name="com.example.fide_rent.LocationsFragment"
+        android:label="@string/menu_maps"
+        tools:layout="@layout/fragment_locations">
+        <action
+            android:id="@+id/action_locationsFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/select_car"
+        android:name="com.example.fide_rent.ui.rent.select_car"
+        android:label="@string/menu_rent">
+        <action
+            android:id="@+id/action_select_car_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_select_car_to_select_dates_Fragment"
+            app:destination="@id/select_dates_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/select_dates_Fragment"
+        android:name="com.example.fide_rent.ui.rent.Select_dates_Fragment"
+        android:label="@string/menu_date">
+        <action
+            android:id="@+id/action_select_dates_Fragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="car"
+            app:argType="com.example.fide_rent.model.Car" />
+    </fragment>
+
 </navigation>
