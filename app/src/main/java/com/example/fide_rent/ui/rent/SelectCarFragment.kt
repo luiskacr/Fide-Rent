@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fide_rent.R
 import com.example.fide_rent.adapter.CarSelectorAdapter
 import com.example.fide_rent.databinding.FragmentSelectCarBinding
 import com.example.fide_rent.viewmodel.SelectCarViewModel
