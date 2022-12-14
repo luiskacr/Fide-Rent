@@ -45,7 +45,10 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_maps">Sucursales</string>
     <string name="menu_rent">Rentar </string>
+    <string name="menu_my_rent">Mis Reservas </string>
     <string name="menu_date">Fechas</string>
+    <string name="menu_txt_welcome">Bienvenido  </string>
+    <string name="menu_txt_welcome2">  a donde vamos Hoy?</string>
 
     <!--Maps-->
     <string name="menu_pin">Sucursal</string>
@@ -54,10 +57,49 @@
     <string name="select_car_Tittle">Seleccione el Vehiculo</string>
 
     <!--Select Date-->
+    <string name="select_date_Tittle">Su Vehiculo Seleccionado</string>
+    <string name="select_date_Select">Seleccione las Fechas</string>
+    <string name="select_date_btn_date">Seleccione las Fechas</string>
+    <string name="select_date_btn_back">Volver</string>
+    <string name="select_date_btn_next">Siguente</string>
+    <string name="date_picker_Tittle">Seleccione las fechas de Reserva</string>
+    <string name="date_picker_save">Guardar</string>
+    <string name="date_picker_txt_from">Desde</string>
+    <string name="date_picker_txt_to">Hasta</string>
+
+    <!--CheckOut-->
+    <string name="select_checkout_Tittle">Confirmar su Renta</string>
+    <string name="select_date_btn_back_cars">Volver</string>
+    <string name="select_date_btn_end">Finalizar</string>
+    <string name="select_date_confirm">Reserva Creada</string>
 
 
+    <!--Card-Info-->
+    <string name="card_info_price">Precio Por Dia: $</string>
+    <string name="card_info_type">Transmisión: </string>
+    <string name="card_info_start_date">Fecha de Inicio: </string>
+    <string name="card_info_end_date">Fecha de Fin: </string>
+    <string name="card_info_total">Precio Total: $</string>
 
-    <!--Others-->
+    <!--My Rent-->
+    <string name="my_rent_Tittle">Seleccione una Reserva</string>
+
+    <!--Update Rent-->
+    <string name="update_Tittle">Informacion de Reserva</string>
+    <string name="update_alert">El Vehiculo de la reserva no puede ser modificado</string>
+    <string name="update_date_tittle">Fechas de Reserva</string>
+    <string name="update_btn_update">Actualizar Reserva</string>
+    <string name="update_btn_delete">Eliminar Reserva</string>
+    <string name="update_delete_msj">Reserva Eliminada</string>
+    <string name="update_update_msj">Reserva Actualizada</string>
+    <string name="update_update_btn">Actualizar Fechas</string>
+    <string name="update_modal_tittle">Atencion</string>
+    <string name="update_modal_msg">Esta Seguro que desea Eliminar esta Reserva</string>
+    <string name="update_modal_accept">Aceptar</string>
+    <string name="update_modal_cancel">Cancelar</string>
+
+
+    <!--Default & Others-->
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -65,15 +107,12 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="title_activity_register">RegisterActivity</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="hello_first_fragment">Hola</string>
     <string name="title_activity_locations">LocationsActivity</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
 </resources>
