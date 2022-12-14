@@ -46,6 +46,7 @@
     <string name="menu_maps">Sucursales</string>
     <string name="menu_rent">Rentar </string>
     <string name="menu_my_rent">Mis Reservas </string>
+    <string name="menu_contact">Contacto</string>
     <string name="menu_date">Fechas</string>
     <string name="menu_txt_welcome">Bienvenido  </string>
     <string name="menu_txt_welcome2">  a donde vamos Hoy?</string>
@@ -83,6 +84,9 @@
 
     <!--My Rent-->
     <string name="my_rent_Tittle">Seleccione una Reserva</string>
+
+    <!--Contacto -->
+    <string name="my_contact_Tittle">Contactanos</string>
 
     <!--Update Rent-->
     <string name="update_Tittle">Informacion de Reserva</string>

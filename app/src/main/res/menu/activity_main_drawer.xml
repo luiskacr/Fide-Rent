@@ -20,5 +20,9 @@
             android:id="@+id/my_rent"
             android:icon="@drawable/ic_menu_my_rent"
             android:title="@string/menu_my_rent" />
+        <item
+            android:id="@+id/contactFragment"
+            android:icon="@drawable/ic_manu_contact"
+            android:title="@string/menu_contact" />
     </group>
 </menu>

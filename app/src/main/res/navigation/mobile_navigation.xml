@@ -62,8 +62,8 @@
     <fragment
         android:id="@+id/contactFragment"
         android:name="com.example.fide_rent.ContactFragment"
-        android:label="fragment_contact"
-        tools:layout="@layout/fragment_contact" >
+        android:label="Contacto"
+        tools:layout="@layout/fragment_contact">
         <action
             android:id="@+id/action_contactFragment_to_nav_home"
             app:destination="@id/nav_home" />

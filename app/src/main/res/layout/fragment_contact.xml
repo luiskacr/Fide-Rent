@@ -8,6 +8,15 @@
     android:orientation="vertical"
     tools:context=".ContactFragment">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/my_contact_Tittle" />
+
     <Button
         android:id="@+id/btn_send_whats"
         android:layout_width="match_parent"
@@ -15,6 +24,7 @@
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/main_green"
         android:text="Contactar WhatsApp"
+        android:layout_margin="8dp"
         android:textSize="16dp" />
 
     <Button
@@ -23,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/main_green"
+        android:layout_margin="8dp"
         android:text="Contactar Correo"
         android:textSize="16dp" />
 
