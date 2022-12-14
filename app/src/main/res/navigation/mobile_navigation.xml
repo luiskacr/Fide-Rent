@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_nav_home_to_select_car"
             app:destination="@id/select_car" />
+        <action
+            android:id="@+id/action_nav_home_to_contactFragment"
+            app:destination="@id/contactFragment" />
     </fragment>
 
     <fragment
@@ -59,6 +62,15 @@
         <argument
             android:name="car"
             app:argType="com.example.fide_rent.model.Car" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.fide_rent.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_contactFragment_to_nav_home"
+            app:destination="@id/nav_home" />
     </fragment>
 
 </navigation>

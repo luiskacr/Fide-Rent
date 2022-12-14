@@ -12,7 +12,7 @@ class CustomAlerts {
     /*
     Function to display a basic alert
     */
-    fun showBasicAlert(title: String, message: String,context: AppCompatActivity){
+    fun showBasicAlert(title: String, message: String, context: AppCompatActivity){
         val builder = AlertDialog.Builder(context)
         builder.setTitle(title)
         builder.setMessage(message)
