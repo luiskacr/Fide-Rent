@@ -3,19 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
+    android:label="Actualizar Renta"
     app:startDestination="@+id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.fide_rent.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_nav_home_to_locationsFragment"
             app:destination="@id/maps" />
         <action
             android:id="@+id/action_nav_home_to_select_car"
             app:destination="@id/select_car" />
+        <action
+            android:id="@+id/action_nav_home_to_myRentFragment"
+            app:destination="@id/my_rent" />
     </fragment>
 
     <fragment
@@ -51,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/select_dates_Fragment"
-        android:name="com.example.fide_rent.ui.rent.Select_dates_Fragment"
+        android:name="com.example.fide_rent.ui.rent.SelectDatesFragment"
         android:label="@string/menu_date">
         <action
             android:id="@+id/action_select_dates_Fragment_to_nav_home"
@@ -59,6 +63,48 @@
         <argument
             android:name="car"
             app:argType="com.example.fide_rent.model.Car" />
+        <action
+            android:id="@+id/action_select_dates_Fragment_to_select_car"
+            app:destination="@id/select_car" />
+        <action
+            android:id="@+id/action_select_dates_Fragment_to_checkOutFragment"
+            app:destination="@id/checkOutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkOutFragment"
+        android:name="com.example.fide_rent.ui.rent.CheckOutFragment"
+        android:label="Check Out">
+        <action
+            android:id="@+id/action_checkOutFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="rent"
+            app:argType="com.example.fide_rent.model.Rent" />
+        <action
+            android:id="@+id/action_checkOutFragment_to_select_dates_Fragment"
+            app:destination="@id/select_dates_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/my_rent"
+        android:name="com.example.fide_rent.ui.rent.MyRentFragment"
+        android:label="Mis Reservas">
+        <action
+            android:id="@+id/action_myRentFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_my_rent_to_updateRentFragment"
+            app:destination="@id/updateRentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateRentFragment"
+        android:name="com.example.fide_rent.ui.rent.UpdateRentFragment"
+        android:label="Mi Reserva">
+        <action
+            android:id="@+id/action_updateRentFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="rent"
+            app:argType="com.example.fide_rent.model.Rent" />
     </fragment>
 
 </navigation>

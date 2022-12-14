@@ -3,15 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.rent.select_car"
-    android:background="@drawable/bg_select_car">
+    android:background="@drawable/bg_rent"
+    tools:context="ui.rent.MyRentFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-         >
-
+        >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -21,10 +20,10 @@
             android:textColor="@color/white"
             android:layout_marginBottom="0dp"
             android:padding="0dp"
-            android:text="@string/select_car_Tittle" />
+            android:text="@string/my_rent_Tittle" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/cars_options"
+            android:id="@+id/rents_options"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="0dp" />

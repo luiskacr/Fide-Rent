@@ -1,6 +1,6 @@
 package com.example.fide_rent.adapter
 
-
+import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -15,7 +15,7 @@ class CarSelectorAdapter: RecyclerView.Adapter<CarSelectorAdapter.CarViewHolder>
     private var carList = emptyList<Car>()
 
 
-    inner class CarViewHolder(private val itemBinding: FragmentCarSelectorBinding): RecyclerView.ViewHolder(itemBinding.root){
+    inner class CarViewHolder(private val itemBinding: FragmentCarSelectorBinding ): RecyclerView.ViewHolder(itemBinding.root){
         fun draw(car: Car){
             itemBinding.carName.text = car.name
             itemBinding.carPrice.text = "Precio Por Dia: $" + car.price
