@@ -20,7 +20,11 @@
         <action
             android:id="@+id/action_nav_home_to_myRentFragment"
             app:destination="@id/my_rent" />
+        <action
+            android:id="@+id/action_nav_home_to_contactFragment"
+            app:destination="@id/contactFragment" />
     </fragment>
+
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -29,6 +33,7 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
+
         android:id="@+id/nav_slideshow"
         android:name="com.example.fide_rent.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
@@ -53,6 +58,17 @@
             android:id="@+id/action_select_car_to_select_dates_Fragment"
             app:destination="@id/select_dates_Fragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.fide_rent.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_contactFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
     <fragment
         android:id="@+id/select_dates_Fragment"
         android:name="com.example.fide_rent.ui.rent.SelectDatesFragment"
